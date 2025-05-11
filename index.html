@@ -1,0 +1,216 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SoftSell – Sell Your Software Licenses</title>
+  <meta name="description" content="SoftSell helps businesses sell unused software licenses. Fast quotes and payments.">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <!-- Custom Animations -->
+  <style>
+    /* Fade-in keyframes */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .fade-in { opacity: 0; animation: fadeIn 1s ease-out forwards; }
+
+    /* Slide + Fade Up */
+    @keyframes slideFadeUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .animate-slide-fade-up { opacity: 0; animation: slideFadeUp 0.8s ease-out forwards; }
+
+    /* Wiggle effect for call-to-action arrow */
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(3deg); }
+      75% { transform: rotate(-3deg); }
+    }
+    .animate-wiggle { display: inline-block; animation: wiggle 1.5s infinite ease-in-out; }
+
+    /* Button scale on hover */
+    .button-scale { transition: transform 0.2s ease-in-out; }
+    .button-scale:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors">
+
+  <!-- Light/Dark Mode Toggle -->
+  <button id="theme-toggle" class="fixed top-4 right-4 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-2 rounded-full">
+    🌓
+  </button>
+
+  <!-- Hero Section -->
+  <header class="bg-blue-600 text-white dark:bg-gray-800 dark:text-white py-20">
+    <div class="max-w-3xl mx-auto px-4 text-center md:text-left">
+      <h1 class="text-4xl md:text-6xl font-bold fade-in animate-slide-fade-up">Unlock Value in Your Unused Software</h1>
+      <p class="mt-4 text-lg fade-in animate-slide-fade-up" style="animation-delay: 0.3s">Sell your unused software licenses quickly and easily with SoftSell.</p>
+      <a href="#contact" class="mt-8 inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition button-scale fade-in animate-slide-fade-up" style="animation-delay: 0.6s">
+        Sell My Licenses
+      </a>
+      <div class="text-3xl mt-6 animate-bounce animate-wiggle fade-in" style="animation-delay: 0.9s">↓</div>
+    </div>
+  </header>
+
+  <!-- How It Works -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in animate-slide-fade-up">How It Works</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center fade-in" style="animation-delay: 0.2s">
+          <div class="mx-auto w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl">⭳</div>
+          <h3 class="mt-4 font-semibold">Upload License</h3>
+          <p class="mt-2 text-gray-600 dark:text-gray-400">Upload your unused software license details securely.</p>
+        </div>
+        <div class="text-center fade-in" style="animation-delay: 0.4s">
+          <div class="mx-auto w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl">💰</div>
+          <h3 class="mt-4 font-semibold">Get Valuation</h3>
+          <p class="mt-2 text-gray-600 dark:text-gray-400">Our team evaluates your license and gives you a quote.</p>
+        </div>
+        <div class="text-center fade-in" style="animation-delay: 0.6s">
+          <div class="mx-auto w-16 h-16 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center text-2xl">💳</div>
+          <h3 class="mt-4 font-semibold">Get Paid</h3>
+          <p class="mt-2 text-gray-600 dark:text-gray-400">Receive payment once the sale is completed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in animate-slide-fade-up">Why Choose SoftSell?</h2>
+      <ul class="space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:gap-8">
+        <li class="flex items-start space-x-4 fade-in" style="animation-delay: 0.2s">
+          <span class="text-blue-500 text-2xl">✔️</span>
+          <span>Fast, hassle-free license valuation.</span>
+        </li>
+        <li class="flex items-start space-x-4 fade-in" style="animation-delay: 0.4s">
+          <span class="text-green-500 text-2xl">🛡️</span>
+          <span>Secure and confidential transactions.</span>
+        </li>
+        <li class="flex items-start space-x-4 fade-in" style="animation-delay: 0.6s">
+          <span class="text-yellow-500 text-2xl">💲</span>
+          <span>Competitive pricing to maximize your returns.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 fade-in animate-slide-fade-up">What Our Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow fade-in animate-slide-fade-up" style="animation-delay: 0.2s">
+          <p class="italic">“SoftSell made it incredibly easy to monetize our extra software licenses. The team was professional and the payment was fast!”</p>
+          <p class="mt-4 font-semibold">— Jane Doe, CTO of TechCorp</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow fade-in animate-slide-fade-up" style="animation-delay: 0.4s">
+          <p class="italic">“Great experience from start to finish. I got a fair valuation and prompt payment for our surplus licenses. Highly recommend!”</p>
+          <p class="mt-4 font-semibold">— John Smith, IT Manager at SoftSolutions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 fade-in animate-slide-fade-up">Get a Quote</h2>
+      <form id="contact-form" action="https://example.com/submit" method="POST" class="space-y-4">
+        <input name="name" type="text" required placeholder="Name"
+               class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input name="email" type="email" required placeholder="Email"
+               class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <input name="company" type="text" placeholder="Company (optional)"
+               class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <select name="licenseType" required
+                class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option value="">Select License Type</option>
+          <option>Single License</option>
+          <option>Multi-License</option>
+          <option>Enterprise Pack</option>
+        </select>
+        <textarea name="message" required rows="4" placeholder="Message"
+                  class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button type="submit"
+                class="w-full bg-blue-600 text-white font-semibold p-3 rounded hover:bg-blue-700 transition button-scale">
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 text-sm">
+    &copy; 2025 SoftSell. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const body = document.body;
+    const modeToggle = document.getElementById('theme-toggle');
+
+    // Load theme from localStorage
+    const currentMode = localStorage.getItem('mode');
+    if (currentMode) {
+      body.classList.add(currentMode);
+    } else {
+      body.classList.add('light-mode');
+      localStorage.setItem('mode', 'light-mode');
+    }
+
+    // Toggle theme
+    modeToggle.addEventListener('click', () => {
+      if (body.classList.contains('light-mode')) {
+        body.classList.replace('light-mode', 'dark-mode');
+        localStorage.setItem('mode', 'dark-mode');
+      } else {
+        body.classList.replace('dark-mode', 'light-mode');
+        localStorage.setItem('mode', 'light-mode');
+      }
+    });
+
+    // IntersectionObserver for scroll animations
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-slide-fade-up');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Form validation
+      const contactForm = document.getElementById('contact-form');
+      contactForm.addEventListener('submit', e => {
+        if (!contactForm.checkValidity()) {
+          e.preventDefault();
+          alert('Please fill out all required fields correctly.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
